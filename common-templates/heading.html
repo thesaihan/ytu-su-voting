@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+<div class="row pt-4">
+    <div class="col-3" style="opacity: 0.6">
+        <img src="{% static 'images/logo.jpg'%}" style="max-width: 70%; height: auto;" class="img-fluid mx-auto d-block"></img>
+    </div>
+
+    <div class="col-6 text-center pt-4 fluid">
+        <h2 class="text-secondary">Yangon Technological University</h2>
+        <h3 class="text-secondary">Students' Union</h3>
+        <h3 class="text-secondary">2018 General Election</h3>
+    </div>
+
+    <div class="col-3" style="opacity: 0.7">
+        <img src="{% static 'images/brand.jpg' %}" style="max-width: 85%; height: auto;" class="img-fluid mx-auto d-block"></img>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <br>
+        <p id="date" class="text-secondary" style="font-weight: lighter;
+font-style: italic;
+font-size: 1.1em;"></p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var d = new Date().toString();
+    $("#date").html(" &dash; " + d.slice(0, 15));
+</script>

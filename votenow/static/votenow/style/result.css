@@ -1,0 +1,63 @@
+.histo {
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+
+.prog {
+    width: 25px;
+    height: 400px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.progBar {
+    background-color: lightblue;
+    height: 300px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.space {
+    background-color: lightgray;
+    height: 100px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.blueBack {
+    background-color: #BED8F1;
+}
+
+.blueFore {
+    color: #234078;
+}
+
+.cyanBack {
+    background-color: #C2FFFD;
+}
+
+.cyanFore {
+    color: #1E8BC4;
+}
+
+.pinkBack {
+    background-color: #FFC7C8;
+}
+
+.pinkFore {
+    color: #C66793;
+}
+
+.greenBack {
+    background-color: #CAFFB9;
+}
+
+.greenFore {
+    color: #2CB977;
+}
+
+.purpleBack {
+    background-color: #DFBCE5;
+}
+
+.purpleFore {
+    color: #6B496E;
+}

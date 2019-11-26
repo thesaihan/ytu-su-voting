@@ -1,0 +1,107 @@
+<!DOCTYPE html> {% load staticfiles %}
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#008080" />
+
+    <title>Voting Result</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'style/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'result/style/result.css'%}" />
+    <link rel="shortcut icon" type="image/jpeg" href="{% static 'images/logo.jpg' %}">
+
+    <script type="text/javascript" src="{% static 'action/jquery-3.3.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'action/bootstrap.min.js' %}"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        {% include 'heading.html' %}
+
+<h3>Vote count for President</h3>
+	<table class="table table-hover" style="width:100%">
+		<tr>
+			<th>ID</th><th>Name</th><th>Vote Count</th>
+		</tr>
+        {% for cm in chairmanRes %}
+            <tr>
+				<td>{{cm.cand_id}}</td>
+				<td>{{cm.name}}</td>
+				<td>{{cm.votecount}}</td>
+			</tr>
+        {% endfor %}
+	</table>
+
+<br><br>
+<h3>Vote count for Secretary</h3>
+	<table class="table table-hover" style="width:100%">
+		<tr>
+			<th>ID</th><th>Name</th><th>Vote Count</th>
+		</tr>
+        {% for sec in secretaryRes %}
+            <tr>
+				<td>{{sec.cand_id}}</td>
+				<td>{{sec.name}}</td>
+				<td>{{sec.votecount}}</td>
+			</tr>
+        {% endfor %}
+	</table>
+
+
+<br><br>
+
+<h3>Vote count for Art Officer</h3>
+	<table class="table table-hover" style="width:100%">
+		<tr>
+			<th>ID</th><th>Name</th><th>Vote Count</th>
+		</tr>
+        {% for art in artRes %}
+            <tr>
+				<td>{{art.cand_id}}</td>
+				<td>{{art.name}}</td>
+				<td>{{art.votecount}}</td>
+			</tr>
+        {% endfor %}
+	</table>
+
+<br><br>
+<h2>Voting Result</h2>
+        <br>
+        <div class="row histo">
+
+            <div class="col-3">
+                <div class="prog mx-auto">
+                    <div class="progBar"></div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="prog mx-auto">
+                    <div class="progBar"></div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="prog mx-auto">
+                    <div class="progBar"></div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="prog mx-auto">
+                    <div class="progBar"></div>
+                </div>
+            </div>
+
+        </div>
+
+<br>
+
+    </div>
+
+    <script type="text/javascript" src="{% static 'result/action/result.js' %}"></script>
+</body>
+
+</html>
