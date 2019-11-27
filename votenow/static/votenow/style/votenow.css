@@ -1,52 +1,85 @@
 .text {
-    color: #00a0f0;
+  color: #00a0f0;
 }
 
 .centerAlign {
-    text-align: center;
+  text-align: center;
 }
 
 .fullWidth {
-    width: 100%;
+  width: 100%;
 }
 
 .cardGroupC {
-    border: 2px solid #CAFFB9;
-    border-radius: 10px;
+  border: 2px solid #caffb9;
+  border-radius: 10px;
 }
 
 .cardGroupS {
-    border: 2px solid #FFC7C8;
-    border-radius: 10px;
+  border: 2px solid #ffc7c8;
+  border-radius: 10px;
 }
 
 .cardGroupA {
-    border: 2px solid #DFBCE5;
-    border-radius: 10px;
+  border: 2px solid #dfbce5;
+  border-radius: 10px;
 }
 
 .cardGroupL {
-    border: 2px solid #BED8F1;
-    border-radius: 10px;
+  border: 2px solid #bed8f1;
+  border-radius: 10px;
 }
 
+.cardGroup {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cardGroup > * {
+  max-width: 180px;
+  min-width: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 276px;
+  overflow: hidden;
+}
+
+.cardGroup .card-body h5 > span {
+  animation: placeSelect 150ms ease-out forwards;
+}
+.catBar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 #topBar {
-    height: 5px;
-    background-color: #00b0c0;
+  height: 5px;
+  background-color: #00b0c0;
 }
 
 #mainTitle {
-    transition-property: font-size;
-    transition-duration: 300ms;
-    transition-delay: 200ms;
-    cursor: default;
+  transition-property: transform;
+  transition-duration: 200ms;
+  transition-delay: 100ms;
+  cursor: default;
 }
 
-#mainTitle:HOVER {
-    font-size: 2.1em;
+#mainTitle:hover {
+  transform: scale(1.1);
 }
 
 h4 {
-    padding: 8px 0px 8px 1.5em;
-    border-radius: 30px 30px 0px 0px;
+  padding: 8px 0px 8px 1.5em;
+  border-radius: 3px;
+}
+
+@keyframes placeSelect {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

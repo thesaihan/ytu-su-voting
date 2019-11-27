@@ -1,45 +1,66 @@
 <!DOCTYPE html> {% load staticfiles %}
 <html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#008080" />
 
     <title>2018 YTU Voting</title>
 
-    <link rel="stylesheet" type="text/css" href="{% static 'style/bootstrap.min.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'votenow/style/votenow.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'votenow/style/result.css' %}" />
-    <link rel="shortcut icon" type="image/jpeg" href="{% static 'images/logo.jpg' %}">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'style/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'votenow/style/votenow.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'votenow/style/result.css' %}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpeg"
+      href="{% static 'images/logo.jpg' %}"
+    />
 
-    <script type="text/javascript" src="{% static 'action/jquery-3.3.1.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'action/bootstrap.min.js' %}"></script>
-</head>
+    <script
+      type="text/javascript"
+      src="{% static 'action/jquery-3.3.1.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'action/bootstrap.min.js' %}"
+    ></script>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        {% include 'heading.html' %}
-        <div class="row">
-            <div id="topBar" class="col-md-12 fullWidth">
-            </div>
+      {% include 'heading.html' %}
+      <div class="row">
+        <div id="topBar" class="col-md-12 fullWidth"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <br />
+          <h3 id="mainTitle" class="text-secondary centerAlign fullWidth">
+            Vote Your Candidate
+          </h3>
+          <br />
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <br>
-                <h3 id="mainTitle" class="text-secondary centerAlign fullWidth">Vote Your Candidate</h3>
-                <br>
-            </div>
-        </div>
+      </div>
 
-        <div class="row">
-            <div class="col-12">
-                <h4 class="greenBack text-secondary">President</h4>
-            </div>
+      <div class="row catBar">
+        <div class="col-12">
+          <h4 class="greenBack text-secondary" >President</h4>
         </div>
-        <div class="row py-4 px-2 cardGroupC">
+      </div>
+      <!-- <div class="row py-4 px-2 cardGroupC">
 
             <div class="col-3">
                 <div id="chairman1" class="card btn btn-outline-secondary">
@@ -103,155 +124,270 @@
                 </div>
             </div>
 
+        </div> -->
+      <div class="row py-4 px-2 cardGroup cardGroupC">
+        <div id="chairman1" class="card btn btn-outline-secondary">
+          <img
+            class="card-img-top"
+            src="{% static 'images/female.jpg' %}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title centerAlign">Rebacca</h5>
+
+            <h5 id="c1">
+              <br />
+            </h5>
+          </div>
         </div>
-        <br>
-        <hr><br>
 
-
-        <div class="row">
-            <div class="col-12">
-                <h4 class="pinkBack text-secondary">Secretary</h4>
-            </div>
+        <div id="chairman2" class="card btn btn-outline-secondary">
+          <img
+            class="card-img-top"
+            src="{% static 'images/male.jpg' %}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title centerAlign">John</h5>
+            <h5 id="c2">
+              <br />
+            </h5>
+          </div>
         </div>
 
-        <div class="row py-4 px-2 cardGroupS">
-
-            <div class="col-3">
-                <div id="secretary1" class="card btn btn-outline-secondary">
-                    <img class="card-img-top" src="{% static 'images/s1.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title centerAlign">Kira</h5>
-                        <h5 id="s1">
-                            <br>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div id="secretary2" class="card btn btn-outline-secondary">
-                    <img class="card-img-top" src="{% static 'images/s2.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title centerAlign">Lea</h5>
-                        <h5 id="s2">
-                            <br>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div id="secretary3" class="card btn btn-outline-secondary">
-                    <img class="card-img-top" src="{% static 'images/s3.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title centerAlign">Salone</h5>
-                        <h5 id="s3">
-                            <br>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div id="secretary4" class="card btn btn-outline-secondary">
-                    <img class="card-img-top" src="{% static 'images/s4.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title centerAlign">Peter</h5>
-                        <h5 id="s4">
-                            <br>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-
+        <div id="chairman3" class="card btn btn-outline-secondary">
+          <img
+            class="card-img-top"
+            src="{% static 'images/male.jpg' %}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title centerAlign">Taylor</h5>
+            <h5 id="c3">
+              <br />
+            </h5>
+          </div>
         </div>
-        <br>
-        <hr><br>
 
-        <div class="row">
-            <div class="col-12">
-                <h4 class="purpleBack text-secondary">Art Officer</h4>
-            </div>
+        <div id="chairman4" class="card btn btn-outline-secondary">
+          <img
+            class="card-img-top"
+            src="{% static 'images/female.jpg' %}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title centerAlign">Josh</h5>
+            <h5 id="c4">
+              <br />
+            </h5>
+          </div>
         </div>
-        <div class="row py-4 px-2 cardGroupA">
 
-            <div class="col-3">
-                <div id="art1" class="card btn btn-outline-secondary">
-                    <img class="card-img-top" src="{% static 'images/a1.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title centerAlign">Toby</h5>
-                        <h5 id="a1">
-                            <br>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div id="art2" class="card btn btn-outline-secondary">
-                    <img class="card-img-top" src="{% static 'images/a2.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title centerAlign">Katnis</h5>
-                        <h5 id="a2">
-                            <br>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-
+        <div id="chairman5" class="card btn btn-outline-secondary">
+          <img
+            class="card-img-top"
+            src="{% static 'images/female.jpg' %}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title centerAlign">Lily</h5>
+            <h5 id="c5">
+              <br />
+            </h5>
+          </div>
         </div>
-        <br>
-        <hr><br>
+      </div>
+      <br />
+      <hr />
+      <br />
 
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <form id="voteForm" class="form-control" action="/votenow/" method="post">
-                    {% csrf_token %}
-                    <br>
-                    <h3 class="h3">Cast your vote here...</h3>
-                    <br>
-                    <div class="form-group">
-                        <label for="entrance_id">Entrance ID : </label>
-                        <input id="entrance_id" class="form-control" type="text" name="entrance_id" placeholder="12/12345" />
-                    </div>
-
-                    <br>
-                    <div class="form-group">
-                        <input class="btn btn-outline-dark btn-lg fullWidth" type="submit" value="Vote" />
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-3"></div>
+      <div class="row catBar">
+        <div class="col-12">
+          <h4 class="pinkBack text-secondary">Secretary</h4>
         </div>
-        <br>
-        <hr><br>
+      </div>
 
+      <div class="row py-4 px-2 cardGroup cardGroupS">
+        <div id="secretary1" class="card btn btn-outline-secondary">
+            <img
+              class="card-img-top"
+              src="{% static 'images/female.jpg' %}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title centerAlign">Kira</h5>
+              <h5 id="s1">
+                <br />
+              </h5>
+            </div>
+          </div>
+        <div id="secretary2" class="card btn btn-outline-secondary">
+            <img
+              class="card-img-top"
+              src="{% static 'images/female.jpg' %}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title centerAlign">Lea</h5>
+              <h5 id="s2">
+                <br />
+              </h5>
+            </div>
+          </div>
+
+        <div id="secretary3" class="card btn btn-outline-secondary">
+            <img
+              class="card-img-top"
+              src="{% static 'images/female.jpg' %}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title centerAlign">Salone</h5>
+              <h5 id="s3">
+                <br />
+              </h5>
+            </div>
+          </div>
+
+        <div id="secretary4" class="card btn btn-outline-secondary">
+            <img
+              class="card-img-top"
+              src="{% static 'images/male.jpg' %}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title centerAlign">Peter</h5>
+              <h5 id="s4">
+                <br />
+              </h5>
+            </div>
+          </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+
+      <div class="row catBar">
+        <div class="col-12">
+          <h4 class="purpleBack text-secondary">Art Officer</h4>
+        </div>
+      </div>
+      <div class="row py-4 px-2 cardGroup cardGroupA">
+        <div id="art1" class="card btn btn-outline-secondary">
+            <img
+              class="card-img-top"
+              src="{% static 'images/male.jpg' %}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title centerAlign">Toby</h5>
+              <h5 id="a1">
+                <br />
+              </h5>
+            </div>
+          </div>
+
+        <div id="art2" class="card btn btn-outline-secondary">
+            <img
+              class="card-img-top"
+              src="{% static 'images/female.jpg' %}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title centerAlign">Katnis</h5>
+              <h5 id="a2">
+                <br />
+              </h5>
+            </div>
+          </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <form
+            id="voteForm"
+            class="form-control"
+            action="/votenow/"
+            method="post"
+          >
+            {% csrf_token %}
+            <br />
+            <h3 class="h3">Cast your vote here...</h3>
+            <br />
+            <div class="form-group">
+              <label for="entrance_id">Entrance ID : </label>
+              <input
+                id="entrance_id"
+                class="form-control"
+                type="text"
+                name="entrance_id"
+                placeholder="12/12345"
+              />
+            </div>
+
+            <br />
+            <div class="form-group">
+              <input
+                class="btn btn-outline-dark btn-lg fullWidth"
+                type="submit"
+                value="Vote"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <br />
+      <hr />
+      <br />
     </div>
 
-    <div id="afterVoteModal" class="modal fade" role="dialog" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 style="color:red" class="modal-title">Warnings</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p class="lead"></p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
-                    <!-- 
+    <div
+      id="afterVoteModal"
+      class="modal fade"
+      role="dialog"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 style="color:red" class="modal-title">Warnings</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="lead"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <!-- 
 				<button class="btn btn-primary" type="button">Logout</button>
 				 -->
-                </div>
-            </div>
-
+          </div>
         </div>
+      </div>
     </div>
 
-    <script type="text/javascript" src="{% static 'votenow/action/votenow.js' %}"></script>
-
-</body>
-
+    <script
+      type="text/javascript"
+      src="{% static 'votenow/action/votenow.js' %}"
+    ></script>
+  </body>
 </html>
