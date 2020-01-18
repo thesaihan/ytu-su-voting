@@ -9,7 +9,7 @@ def indexFunc(request):
             'secretaryRes':addVoteCount(Candidate.objects.filter(cand_type='s')),
             'chairmanRes':addVoteCount(Candidate.objects.filter(cand_type='c')),
             }
-        print(param)
+        #print(param)
         return render(request, 'result/result.html', context=param)
     else:
         return redirect('/login/')
